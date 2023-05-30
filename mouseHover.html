@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse-hover</title>
+    <style>
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img{
+            width: 500px;
+            height: 500px;
+            transition: all 0.4s ease-in-out;
+        }
+        .incWidth{
+            width: 700px;
+            height: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        <img class="img" onmouseover="zoom()" src="https://img.freepik.com/free-vector/mango-tree-with-fruits-leaves-illustrated_23-2148811122.jpg?w=740&t=st=1685271601~exp=1685272201~hmac=68799b4df0c354a49848abbd8f1a933d89b00594632e026ae7d4d6fe835e696e" alt="MangoImg">
+    </section>
+
+    <script>
+        const img = document.querySelector('.img');
+        function zoom(){
+            img.classList.toggle("incWidth");
+        }
+    </script>
+</body>
+
+</html>

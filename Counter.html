@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+        .counterBody{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid;
+            padding: 30px;
+        }
+        input{
+            width: 40px;
+            padding: 5px;
+            text-align: center;
+        }
+        button{
+            padding: 5px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="counterBody">
+        <h3>Counter App</h3>
+        <div class="main">
+            <button class="inc" onclick="dec()">Decrement by 1</button>
+            <input type="text" name="" id="num" value="0">
+            <button class="inc" onclick="inc()">Increment by 1</button>
+        </div>
+        <button class="resetValue" onclick="reset()">Reset Value</button>
+    </div>
+
+    <script>
+        var num = document.querySelector('#num').value;
+        function inc(){
+            num++;
+            document.querySelector('#num').value=num;
+        }
+        function dec(){
+            num--;
+            document.querySelector('#num').value=num;
+        }
+        function reset(){
+            document.querySelector('#num').value=0;
+        }
+    </script>
+</body>
+</html>
